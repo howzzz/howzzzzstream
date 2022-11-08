@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600&display=swap");
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-family: "Source Serif Pro", serif;
+  background-color: #1a1a2e;
+}
+
+.menu-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  background: rgba(52, 58, 64, 0.5);
+  line-height: 50px;
+  z-index: 999;
+}
+
+.menu-toggle:focus,
+.menu-toggle:hover {
+  color: #fff;
+}
+
+.menu-toggle:hover {
+  background: #343a40;
+}
+
+/* ************************ */
+#sidebar-wrapper {
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  transition: all 0.4s ease 0s;
+  transform: translateX(250px);
+  background: #1a1a2e;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li.sidebar-nav-item a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 15px;
+}
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  font-size: 1.2rem;
+  background: rgba(52, 58, 64, 0.1);
+  height: 80px;
+  line-height: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+.sidebar-nav > .sidebar-brand a {
+  color: #fff;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+#sidebar-wrapper.active {
+  right: 250px;
+  width: 250px;
+  transition: all 0.4s ease 0s;
+}
+
+/* ***************** */
+.masthead {
+  min-height: 30rem;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    ),
+    url("frontend/howzstream2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 120px 100px 250px #000, inset -120px -100px 250px #000000;
+}
+.masthead h1 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.masthead .mb-5 em {
+  color: #fff;
+  text-transform: uppercase;
+}
+@media (min-width: 992px) {
+  .masthead {
+    height: 100vh;
+  }
+  .masthead h1 {
+    font-size: 5.5rem;
+  }
+}
+
+.btn-xl {
+  padding: 1.25rem 2.5rem;
+  text-transform: uppercase;
+  background-color: #d35d6e;
+  border: none;
+  color: #fff;
+}
+
+.btn-xl:hover {
+  background-color: #fd3a69;
+  color: #000;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+/* ******************* */
+.Container {
+  margin: 2% 2% 0 3%;
+}
+.Movies img {
+  margin-right: 1%;
+  margin-bottom: 10%;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: -4px 4px 5px 0 #000;
+  transition: 0.8s;
+}
+
+.Movies img:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.Container h2 {
+  margin-bottom: 2%;
+  color: #f3e6e3;
+}
+
+/* *********** */
+#footer {
+  background-color: #020314;
+  padding: 2% 15%;
+  color: #fff;
+  text-align: center;
+}
+
+.social-icon {
+  margin: 20px 10px;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  color: cadetblue;
+}
+
+.footername {
+  color: coral;
+}
+.footername:hover {
+  text-decoration: none;
+  color: crimson;
+}
+
+/* ************ */
+.scroll-to-top {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  background: rgba(52, 58, 64, 0.5);
+  line-height: 45px;
+  display: none;
+}
+
+.scroll-to-top:focus,
+.scroll-to-top:hover {
+  color: whitesmoke;
+}
+.scroll-to-top:hover {
+  background: #343a40;
+}
+.scroll-to-top i {
+  font-weight: 800;
+}
+
+/* Add a black background color to the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #000000;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Style the "active" element to highlight the current page */
+  .topnav a.active {
+    background-color: #2196F3;
+    color: white;
+  }
+  
+  /* Style the search box inside the navigation bar */
+  .topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+  }
+  
+  /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+  @media screen and (max-width: 600px) {
+    .topnav a, .topnav input[type=text] {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    .topnav input[type=text] {
+      border: 1px solid #ccc;
+    }
+  }
+ 
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 18px;
+  font-family: Play, sans-serif;
+  line-height: 1.2;
+  background: rgb(31, 31, 31);
+  color: #aaa;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(43, 183, 164);
+  font-weight: bold;
+  transition: .3s;
+  &:hover {
+    color: white;
+    
+  }
+}
+
+h1 {
+  margin: 20px 0;
+  margin-left:35%;
+  color: white;
+}
+p {
+  margin: .8em 0;
+}
+.wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+form {
+  label {
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: .3em;
+  }
+  input {
+    outline: none;
+    width: 100%;
+    font-size: 1.3rem;
+    padding: .5em 1em;
+    border: 5px solid white;
+    border-radius: .3em;
+    &:focus {
+      border-color: rgb(43, 183, 164);
+    }
+  }
+}
+.results {
+  margin: 1rem auto;
+}
+.result {
+  padding: .8rem;
+  margin-bottom: .8rem;
+  border: 5px solid #aaa;
+  border-radius: .3em;
+ .imdb {
+   float: right;
+   position: relative;
+   top: 5px;
+ }
+  h2 {
+    float: left;
+    color: white;
+    a {
+      color: #aaa;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+  .title {
+    margin-bottom: .5em;
+  }
+  .meta {
+    display: block;
+    strong {
+      color: white;
+    }
+  }
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
